@@ -1,5 +1,5 @@
 # Prefixes
-COMPILER_PREFIX = /usr/local/
+COMPILER_PREFIX = /usr
 #COMPILER_PREFIX = $(SDCC_PREFIX)
 #ARCH=z180
 #ARCH=ez80_z80
@@ -25,16 +25,16 @@ MOVE = mv
 SED = sed
 
 # Project directories
-SRC_DIR = src/
+SRC_DIR = src
 CPM_SRC_DIR = $(SRC_DIR)/cpm
 SYSLIB_SRC_DIR = $(SRC_DIR)/syslib
 HWLIB_SRC_DIR = $(SRC_DIR)/hw
-BIN_DIR = bin/
+BIN_DIR = bin
 
-LSRC_DIR = lsrc/
-LBIN_DIR = lbin/
+LSRC_DIR = lsrc
+LBIN_DIR = lbin
 
-ESRC_DIR = esrc/
+ESRC_DIR = esrc
 
 INCLUDE_DIR = -I$(SRC_DIR)/include -I$(SRC_DIR)
 
