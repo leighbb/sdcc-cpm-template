@@ -13,12 +13,8 @@ $(BIN_DIR)/generic.arf:
 	$(QUIET)$(ECHO) -i $(BIN_DIR)/$(REPLACE_TAG).ihx >> $(BIN_DIR)/generic.arf
 	$(QUIET)$(ECHO) -k $(COMPILER_LIBS) >> $(BIN_DIR)/generic.arf
 	$(QUIET)$(ECHO) -l $(ARCH) >> $(BIN_DIR)/generic.arf
-	$(QUIET)$(ECHO) $(BIN_DIR)/cpm0.rel >> $(BIN_DIR)/generic.arf
-	$(QUIET)$(ECHO) $(BIN_DIR)/cpmbdos.rel >> $(BIN_DIR)/generic.arf
-	$(QUIET)$(ECHO) $(BIN_DIR)/cprintf.rel >> $(BIN_DIR)/generic.arf
-	$(QUIET)$(ECHO) $(BIN_DIR)/cpm_sysfunc.rel >> $(BIN_DIR)/generic.arf
-	$(QUIET)$(ECHO) $(BIN_DIR)/ansi_term.rel >> $(BIN_DIR)/generic.arf
-	$(QUIET)$(ECHO) $(BIN_DIR)/hw_common.rel >> $(BIN_DIR)/generic.arf
-	$(QUIET)$(ECHO) $(BIN_DIR)/hw_modprn02.rel >> $(BIN_DIR)/generic.arf
+	$(QUIET)$(ECHO) -k $(LIB_DIR) >> $(BIN_DIR)/generic.arf
+	$(QUIET)$(ECHO) -l cpm >> $(BIN_DIR)/generic.arf
+	$(QUIET)$(ECHO) $(LIB_DIR)/cpm0.rel >> $(BIN_DIR)/generic.arf
 	$(QUIET)$(ECHO) $(BIN_DIR)/$(REPLACE_TAG).rel >> $(BIN_DIR)/generic.arf
 	$(QUIET)$(ECHO) -e >> $(BIN_DIR)/generic.arf

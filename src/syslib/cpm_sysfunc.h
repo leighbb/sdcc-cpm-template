@@ -49,7 +49,7 @@ void cpm_reset(void);
 
 char *cpm_gets(char *p);
 char cpm_getchar(void);
-void cpm_putchar(char c);
+void putchar(char c);
 
 uint8_t cpm_performFileOp(FileOperation fop, FCB *cb);
 

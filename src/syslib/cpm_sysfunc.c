@@ -41,7 +41,7 @@ char cpm_getchar(void) {
 	return cpmbdos_extn(&cread, &ret_ba, &ret_hl);
 }
 
-void cpm_putchar(char c) {
+void putchar(char c) {
 	BDOSCALL cwrite = { C_WRITE, { (uint16_t)c } };
 	cpmbdos_extn(&cwrite, &ret_ba, &ret_hl);
 }
