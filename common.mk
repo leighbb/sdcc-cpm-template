@@ -14,6 +14,7 @@ QUIET = @
 CCC = $(COMPILER_PREFIX)/bin/sdcc
 CAS = $(COMPILER_PREFIX)/bin/sdasz80
 CLD = $(COMPILER_PREFIX)/bin/sdldz80
+CAR = $(COMPILER_PREFIX)/bin/sdar
 
 # Local CC
 CC = gcc
@@ -30,6 +31,7 @@ CPM_SRC_DIR = $(SRC_DIR)/cpm
 SYSLIB_SRC_DIR = $(SRC_DIR)/syslib
 HWLIB_SRC_DIR = $(SRC_DIR)/hw
 BIN_DIR = bin
+LIB_DIR = lib
 
 LSRC_DIR = lsrc
 LBIN_DIR = lbin

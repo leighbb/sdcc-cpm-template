@@ -4,6 +4,7 @@ all: tools libraries hello
 
 clean:	tools-clean libraries-clean hello-clean 
 	rm -f $(BIN_DIR)/*
+	rm -f $(LIB_DIR)/*
 
 include tools.mk # Local tools
 include libraries.mk # Libraries
