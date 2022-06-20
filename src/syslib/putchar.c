@@ -7,7 +7,11 @@
 #if (__SDCCCALL > 1)
 #error unsupported SDCC calling convention (>1)
 #else
-/* SDCC calling convention version 1 - argument in register a */
+/*
+ * SDCC calling convention version 1
+ * - char argument in register a
+ * - int result in de
+ */
 int putchar(char c) __naked {
 	c;
 	__asm
@@ -20,7 +24,7 @@ int putchar(char c) __naked {
 		ld	d,#0
 		push	de
                 call    5
-		pop	hl
+		pop	de
 		pop	ix
                 ret
 00002$:
@@ -32,16 +36,21 @@ int putchar(char c) __naked {
 }
 #endif
 #else
-/* SDCC calling convention version 0 - argument on stack */
+/*
+ * SDCC calling convention version 0
+ * - char argument on stack
+ * - int result in hl
+ */
 int putchar(char c) __naked {
 	c;
 	__asm
-		push	ix
-		ld	hl,#4
+		ld	hl,#2
 		add	hl,sp
 		ld	a,(hl)
+		cp	#10
 		jr	z,00002$
 00001$:
+		push	ix
 		ld	c,#C_WRITE
 		ld	e,a
 		ld	d,#0
